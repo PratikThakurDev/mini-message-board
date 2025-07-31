@@ -1,0 +1,204 @@
+/* Dark theme base for index page */
+
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
+body {
+  background: #1e293b;
+  color: #f1f5f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #283148;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffd966;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #ffd966;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #fff8cf;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem; /* extra space for FAB */
+}
+
+li {
+  background: #2f3a54;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s, transform 0.15s;
+  cursor: default;
+}
+
+li:hover,
+li:focus-within {
+  background: #384562;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.message-info {
+  display: flex;
+  align-items: center;
+  max-width: 75%;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  background: #ffd966;
+  color: #283148;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  user-select: none;
+}
+
+.message-text-container {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+.message-user {
+  font-weight: 700;
+  color: #ffd966;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+
+.message-text {
+  font-size: 1rem;
+  color: #e0e6f0;
+  margin-top: 0.15rem;
+  white-space: pre-wrap;
+}
+
+.message-date {
+  font-size: 0.85rem;
+  color: #adb5bd;
+  margin-left: 1rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.open-link {
+  background-color: #ffd966;
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  color: #283148;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(255, 217, 102, 0.6);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.open-link:hover,
+.open-link:focus {
+  background-color: #fff8cf;
+  color: #283148;
+  outline: none;
+}
+
+/* FAB: Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  background: #ffd966;
+  color: #283148;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.32);
+  text-decoration: none;
+  z-index: 10;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+.fab:hover,
+.fab:focus {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.32);
+  outline: none;
+}
+
+/* Scrollbar Styling */
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+ul::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 10px;
+}
+ul::-webkit-scrollbar-thumb {
+  background: #ffd966;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .message-date {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .open-link {
+    margin-top: 0.8rem;
+    align-self: center;
+  }
+}

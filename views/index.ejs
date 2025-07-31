@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Message Board</title>
+  <meta charset="UTF-8" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/index.css" />
 </head>
 <body>
-<h1><%= title %></h1>
-<a href="/new">Add a new message</a>
-<ul>
-  <% messages.forEach(function(msg, idx) { %>
-    <li>
-      <strong><%= msg.user %>:</strong>
-      <%= msg.text %>
-      <small>(<%= msg.added.toLocaleString() %>)</small>
-      <a href="/message/<%= idx %>">Open</a>
-    </li>
-  <% }); %>
-</ul>
+  <div class="container" role="main" aria-label="Mini Message Board">
+    <h1><%= title %></h1>
+    <a href="/new" class="fab" aria-label="Add new message" title="Add new message">+</a>
+
+    <ul>
+      <% messages.forEach(function(msg, idx) { %>
+        <li tabindex="0">
+          <div class="message-info">
+            <div class="avatar" aria-hidden="true"><%= msg.user.charAt(0).toUpperCase() %></div>
+            <div class="message-text-container">
+              <div class="message-user"><%= msg.user %></div>
+              <div class="message-text"><%= msg.text %></div>
+            </div>
+            <div class="message-date" aria-label="Message added on <%= new Date(msg.added).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) %>">
+              <%= new Date(msg.added).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) %>
+            </div>
+          </div>
+          <a class="open-link" href="/message/<%= idx %>" aria-label="Open message from <%= msg.user %>">Open</a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
 
 </body>
 </html>

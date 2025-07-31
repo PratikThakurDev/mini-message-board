@@ -1,0 +1,62 @@
+/* Dark theme message.css */
+
+body {
+  background: #1e293b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f5f9;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: #283148;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+  padding: 2rem;
+  color: #f1f5f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.4rem;
+  color: #ffd966;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+p strong {
+  color: #ffd966;
+}
+
+.back-link {
+  display: block;
+  margin-top: 1.8rem;
+  text-align: center;
+  color: #ffd966;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.back-link:hover,
+.back-link:focus {
+  color: #fff8cf;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,95 @@
+/* Dark theme form.css */
+
+body {
+  background: #1e293b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f5f9;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  max-width: 450px;
+  width: 100%;
+  background: #283148;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+  color: #f1f5f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ffd966;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  background: #2f3a54;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #f1f5f9;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: box-shadow 0.3s, outline-color 0.3s;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px 2px #ffd966;
+  outline-color: #ffd966;
+}
+
+button[type="submit"] {
+  background-color: #ffd966;
+  color: #283148;
+  border: none;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 217, 102, 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #fff8cf;
+  color: #283148;
+  outline: none;
+}
+
+.back-link {
+  display: block;
+  margin-top: 1.5rem;
+  color: #ffd966;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.back-link:hover,
+.back-link:focus {
+  color: #fff8cf;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
