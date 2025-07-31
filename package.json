@@ -1,0 +1,29 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app",
+    "dev": "node --watch app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PratikThakurDev/mini-message-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PratikThakurDev/mini-message-board/issues"
+  },
+  "homepage": "https://github.com/PratikThakurDev/mini-message-board#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2"
+  }
+}
