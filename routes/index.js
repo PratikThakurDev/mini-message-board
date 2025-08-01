@@ -2,8 +2,12 @@ import express from "express";
 const router = express.Router();
 
 const messages = [
-  { text: "Hi there!", user: "Amando", added: new Date() },
-  { text: "Hello World!", user: "Charles", added: new Date() },
+  { text: "Hey Amando, how's it going?", user: "Charles", added: new Date() },
+  { text: "Pretty good, Charles! Just started working on a new project. You?", user: "Amando", added: new Date() },
+  { text: "Same here! I've been learning Express.js. It's a bit tricky at first.", user: "Charles", added: new Date() },
+  { text: "Stick with it—once you get the hang of routes and middleware, it gets fun!", user: "Amando", added: new Date() },
+  { text: "Thanks! If I get stuck, can I ask you some questions?", user: "Charles", added: new Date() },
+  { text: "Of course! That's what friends are for.", user: "Amando", added: new Date() }
 ];
 
 router.get("/", (req, res) => {
